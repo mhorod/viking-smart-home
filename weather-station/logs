@@ -1,0 +1,114 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.98.2.114:8000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [07/Apr/2024 05:46:06] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:06] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:06] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:06] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:06] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:07] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:08] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /v1/scheduledFireplace HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /static/thorus.png HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:09] "GET /static/top-bar.png HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:10] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:11] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:12] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:12] "POST /v1/scheduleFireplace HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:12] "GET /v1/drive HTTP/1.0" 200 -
+[2024-04-07 05:46:12,333] ERROR in app: Exception on /v1/scheduledFireplace [GET]
+Traceback (most recent call last):
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/main.py", line 99, in scheduled_fireplace
+    return jsonify(fireplace.scheduled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/json/__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mhorod/dev/viking-smart-home/weather-station/.venv/lib/python3.11/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type bytes is not JSON serializable
+127.0.0.1 - - [07/Apr/2024 05:46:12] "[35m[1mGET /v1/scheduledFireplace HTTP/1.0[0m" 500 -
+127.0.0.1 - - [07/Apr/2024 05:46:12] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:12] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:13] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:14] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:14] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:14] "POST /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:14] "GET /v1/drive HTTP/1.0" 200 -
+127.0.0.1 - - [07/Apr/2024 05:46:14] "GET /v1/drive HTTP/1.0" 200 -
+received SIGINT
+Exception ignored in: <module 'threading' from '/usr/lib/python3.11/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1583, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 
