@@ -59,6 +59,7 @@ class KeyDetector:
             if time.time() - self.last_time_greeted > self.min_time_between_greetings:
                 self.message_queue.push(WelcomeBackMessage(self.greeting_for))
 
+        self.keys_detected = self.beam.obstacle_detected()
 
 
 class TemperatureMonitor:
@@ -122,14 +123,20 @@ class InstagramLikersMonitor:
                 self.message_queue.push(LikersMessage(text))
 
 class RobotSentForWoodMessage(Message, HasTimeLimit):
-    ROBOT_SENT_FOR_WOOD_MESSAGE = "ROBOT_SENT_FOR_WOOD"
     def __init__(self, time_to_live):
-        super().__init__("Iza Viking was\nsent for wood", self.ROBOT_SENT_FOR_WOOD_MESSAGE)
+        super().__init__("Iza Viking was\nsent for wood", "ROBOT_WOOD_MESSAGE")
         self.time_to_live = time_to_live
 
     def get_time_to_live(self):
         return self.time_to_live
 
+class RobotCollectedWoodMessage(Message, HasTimeLimit):
+    def __init__(self, time_to_live):
+        super().__init__("Iza Viking was\ncollected wood", "ROBOT_WOOD_MESSAGE")
+        self.time_to_live = time_to_live
+
+    def get_time_to_live(self):
+        return self.time_to_live
 
 class RobotGotStuck(Message, HasTimeLimit):
     ROBOT_GOT_STUCK_MESSAGE = "ROBOT_GOT_STUCK_MESSAGE"
@@ -146,9 +153,17 @@ class RobotMonitor:
         self.robot = robot
         self.message_queue.set_type_limit("ROBOT_SENT_FOR_WOOD", 1)
         self.message_queue.set_type_limit("ROBOT_GOT_STUCK_MESSAGE", 1)
+
+        self.robot_gathering_wood = self.robot.gathering_wood
     
     def update(self):
         if self.robot.stuck:
             self.message_queue.push(RobotGotStuck(120))
-        if self.robot.gathering_wood:
+
+        if self.robot.gathering_wood and not self.robot_gathering_wood:
             self.message_queue.push(RobotSentForWoodMessage(120))
+        elif not self.robot.gathering_wood and self.robot_gathering_wood:
+            self.message_queue.push(RobotCollectedWoodMessage(120))
+
+        self.robot_gathering_wood = self.robot.gathering_wood
+

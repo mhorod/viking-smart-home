@@ -49,17 +49,12 @@ class Display(Thread):
         self.lcd.display(msg.text)
 
 
-@dataclass
-class DriveCommand:
-    x: int
-    y: int
-
 drive_command = DriveCommand(0, 0)
 
 app = Flask(__name__)
 weather_station = WeatherStation()
 
-robot = Robot(300)
+robot = Robot(120)
 beam = Beam()
 fireplace = Fireplace()
 
@@ -77,11 +72,18 @@ def drive_robot():
     drive = request.data
     x, y = drive[0], drive[1]
     drive_command = DriveCommand(x, y)
+    if (x, y) != (0, 0):
+        robot.manual_driving()
     return ""
 
 @app.route('/v1/drive', methods=["GET"])
 def get_robot_drive():
-    return jsonify(drive_command)
+    command = drive_command
+    if robot.auto_driving:
+        cmd = robot.get_current_command()
+        if cmd is not None:
+            command = cmd
+    return jsonify(command)
 
 @app.route('/v1/beam', methods=["GET"])
 def get_beam():
@@ -119,7 +121,7 @@ modules = [
     KeyDetector(message_queue, 3600, 300),
     TemperatureMonitor(weather_station, robot, 30),
     RobotMonitor(message_queue, robot),
-    InstagramLikersMonitor(message_queue)
+    #InstagramLikersMonitor(message_queue)
 ]
 
 display = Display(message_queue, modules)
