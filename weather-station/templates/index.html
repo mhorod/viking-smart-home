@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona Główna</title>
+</head>
+<body>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.dark-bg {
+	background-color: #032047;
+}
+.dark-fg {
+	color: #032047;
+}
+
+.light-bg {
+	background-color: #E1EDFF;
+}
+
+h1, h2 {
+	color: #032047;
+	margin-bottom: 20px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans";
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+#left-column {
+	flex: 1;
+	padding: 50px;
+}
+
+#right-column {
+	flex: 1;
+	padding: 50px;
+}
+
+.card {
+	border-radius: 25px;
+	background: white;
+	padding: 25px;
+}
+
+input[type="text"] {
+	border-radius: 10px;
+	padding: 10px;
+	background: white;
+	border: none;
+	outline: none;
+}
+
+.btn {
+	background-color: #032047;
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+
+
+ul {
+	padding-left: 30px;
+}
+
+img {
+	object-fit: contain;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+
+#scheduled-wood {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.scheduled-wood {
+	border-radius: 10px;
+	padding: 10px;
+	background: white;
+	width: 200px;
+}
+
+</style>
+	<img src="/static/top-bar.png"/>
+	<main class="light-bg">
+		<div id="left-column">
+			<section>
+				<h1> O projekcie </h1>
+				<div class="card">
+					<h2> Kto to Iza? </h2>
+					Składa się z:
+					<ul>
+						<li> Stacji Pogodowej "Kasi" </li>
+						<li> Robota Wikinga "Izy" </li>
+						<li> Kontrolera "Michała" </li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h1> Ustaw swoje drewno! </h1>
+				<p> Podaj liczbę godzin za którą chcesz aby Iza-Wiking dołożyła drewna do kominka. </p>
+				<div>
+					<input type="text" id="wood-schedule-time">
+					<button class="btn" onclick="schedule_wood()"> Gotowe! </button>
+				</div>
+			</section>
+			<section>
+			<h1> Ustawione drewna </h1>
+			<div id="scheduled-wood">
+			</div>
+			</section>
+		</div>
+
+		<div id="right-column">
+			<img src="/static/thorus.png"/>
+		</div>
+	</main>
+</body>
+<script>
+const scheduled_wood = document.getElementById("scheduled-wood");
+const wood_schedule_time_input = document.getElementById("wood-schedule-time");
+function schedule_wood() {
+		
+		fetch("http://pi.local/v1/scheduleFireplace", {method: "POST",
+				body: wood_schedule_time_input.value
+			}
+			)
+			.then(res => refresh_scheduled_wood())
+}
+
+function create_scheduled_wood(time) {
+	let element = document.createElement("div");
+	element.innerText = time;
+	element.classList.add("scheduled-wood")
+	return element;
+}
+
+function refresh_scheduled_wood() {
+	fetch("http://pi.local/v1/scheduledFireplace")
+			.then(res => res.json())
+			.then(data => {
+					console.log(data);
+					scheduled_wood.innerHTML = ""
+					for (const wood of data) {
+							scheduled_wood.appendChild(create_scheduled_wood(wood));
+						}
+				});
+}
+refresh_scheduled_wood();
+</script>
+</html>
+
