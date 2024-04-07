@@ -118,7 +118,7 @@ modules = [
     CoffeeSuggestor(message_queue, weather_station, 997, 300, 120),
     KeyDetector(message_queue, 3600, 300),
     TemperatureMonitor(weather_station, robot, 30),
-    RobotMonitor(message_queue, robot)
+    RobotMonitor(message_queue, robot),
     InstagramLikersMonitor(message_queue)
 ]
 
